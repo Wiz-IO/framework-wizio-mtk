@@ -1,7 +1,7 @@
 {
     "name": "framework-wizio-mtk",
     "description": "MTK Frameworks for PlatformIO",
-    "url": "",
+    "url": "https://github.com/Wiz-IO/framework-wizio-mtk",
     "system": "*",
     "version": "1.0.0"
 }
