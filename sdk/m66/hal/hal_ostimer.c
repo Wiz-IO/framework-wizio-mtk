@@ -35,15 +35,15 @@ int OST_SetFrameDuration(uint16_t frm_dur)
         return -1;
     uint16_t ost_frm_num = 0;
     uint16_t tmp_frm_f32k = (frm_dur * 8) / 245; // 30.5176
-    printf("tmp_frm_f32k = %d\n", (int)tmp_frm_f32k);
+    //printf("tmp_frm_f32k = %d\n", (int)tmp_frm_f32k);
     uint16_t test = ((uint16_t)0xA4 + tmp_frm_f32k - 1) / (uint16_t)tmp_frm_f32k; // CLK_SETTLE(0xA0) + 4
-    printf("test = %d\n", (int)test);
+    //printf("test = %d\n", (int)test);
     if (test + 1 <= 2)
         ost_frm_num = 2;
     else
         ost_frm_num = test + 1;
     int result = (ost_frm_num << 12) + ost_frm_num * tmp_frm_f32k - 5;
-    printf("OST_FRM_F32K = %d\n", result);
+    //printf("OST_FRM_F32K = %d\n", result);
     OST_FRM_F32K = result;
     OST_FRM = frm_dur;
     return result;
