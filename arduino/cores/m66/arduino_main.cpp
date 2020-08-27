@@ -60,14 +60,14 @@ MPU_Initialize(); /* Setup system cache */
     NVIC_Initialize();
     EnableInterrupts();
 
-#if BOOT_SIZE > 0
-    uint32_t *info = (uint32_t *)0x80000000;
-    printf("[SYS] CPU_HW: %04lX\n", *info++);
-    printf("[SYS] CPU_SW: %04lX\n", *info++);
-    printf("[SYS] CPU_ID: %04lX\n", *info++);
-    printf("[SYS] CPU_SB: %04lX\n", *info++);
-    //USART_SendString((TUSART *)USART1, (char *)"[SYS] INIT END\n");
-#endif
+
+    // print SoC info
+    //uint32_t *info = (uint32_t *)0x80000000;
+    //printf("[SYS] CPU_HW: %04lX\n", *info++);
+    //printf("[SYS] CPU_SW: %04lX\n", *info++);
+    //printf("[SYS] CPU_ID: %04lX\n", *info++);
+    //printf("[SYS] CPU_SB: %04lX\n", *info++);
+
 }
 
 extern "C" int main(void)
