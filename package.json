@@ -1,0 +1,7 @@
+{
+    "name": "framework-wizio-mtk",
+    "description": "MTK Frameworks for PlatformIO",
+    "url": "",
+    "system": "*",
+    "version": "1.0.0"
+}
